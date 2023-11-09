@@ -1,5 +1,5 @@
 {
-  "name": "serena",
+  "name": "express",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,40 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.1",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "@prisma/client": "^5.2.0",
+    "@react-google-maps/api": "^2.19.0",
+    "@stripe/stripe-js": "^2.0.0",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.1",
+    "chart.js": "^4.3.3",
+    "cloudinary": "^1.40.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "multiparty": "^4.2.3",
+    "next": "^13.4.12",
+    "next-google-fonts": "^2.2.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-icons": "^4.10.1",
+    "react-swipeable-views": "^0.14.0",
+    "stripe": "^12.18.0",
+    "styled-components": "^5.3.11"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.8",
+    "prisma": "^5.2.0"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "server.js",
+  "author": "user",
+  "license": "ISC"
 }

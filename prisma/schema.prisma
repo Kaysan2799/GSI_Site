@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model username {
+  id       Int     @id @default(autoincrement())
+  username String? @db.VarChar(255)
+  password String  @unique @db.VarChar(255)
+}
+
+model intro {
+  id          Int     @id @unique
+  mainheading String? @db.VarChar(255)
+  subheading  String? @db.VarChar(255)
+  para        String? @db.VarChar(1500)
+  img1        String? @db.VarChar(255)
+  img2        String? @db.VarChar(255)
+}
+
+model donatecom1 {
+  id          Int     @id @unique
+  img1        String? @db.VarChar(255)
+  img2        String? @db.VarChar(255)
+  img3        String? @db.VarChar(255)
+  mainheading String? @db.VarChar(255)
+  para        String? @db.VarChar(1500)
+}
+
+model detailsgrid {
+  id                  Int     @id @default(autoincrement())
+  site                String? @db.VarChar(255) @unique
+  distric             String? @db.VarChar(255)
+  area                String? @db.VarChar(255)
+  lat                 Float? // New field for latitude
+  lng                 Float? // New field for longitude
+  noofplant           String? @db.VarChar(255)
+  carbonsequestration String? @db.VarChar(255)
+  airquality          String? @db.VarChar(255)
+  soilprotection      String? @db.VarChar(255)
+  economicbenefits    String? @db.VarChar(255)
+}
+
+model piechart {
+  id         Int     @id @default(autoincrement())
+  site       String? @db.VarChar(255) @unique
+  greenarea  Float?
+  treecanopy Float?
+  barrenland Float?
+  wetland    Float?
+}
+
+model sitedetails {
+  id      Int     @id @default(autoincrement())
+  img1    String? @db.VarChar(255)
+  img2    String? @db.VarChar(255)
+  img3    String? @db.VarChar(255)
+  site    String? @db.VarChar(255) @unique
+  webtext String? @db.VarChar(1500)
+}
+
+model clientinformation {
+  id          Int     @id @default(autoincrement())
+  name        String? @db.VarChar(255)
+  email       String? @db.VarChar(255)
+  address     String? @db.VarChar(255)
+  country     String? @db.VarChar(255)
+  phonenumber String? @db.VarChar(255)
+  donation    String? @db.VarChar(255)
+}
